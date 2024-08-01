@@ -68,6 +68,7 @@ def test_get_single_member_implemented(client):
 def test_get_single_member_returns_dict(client):
     response = client.get('/member/3443')
     data = json.loads(response.data)
+    print('hoho',data)
     assert data is not None
     assert isinstance(data, dict)
 
